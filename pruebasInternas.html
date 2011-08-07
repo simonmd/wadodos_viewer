@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Processing.js - Basic Example</title>      
+<script language="javascript" src="processing.init.js"></script>
+<script language="javascript" src="processing-1.2.3.js"></script>
+</head>
+<body>
+
+<script type="application/processing">
+/* 
+  PROCESSINGJS.COM - BASIC EXAMPLE
+  Delayed Mouse Tracking  
+  MIT License - Hyper-Metrix.com/F1LT3R
+  Native Processing compatible 
+*/  
+
+// Global variables
+var str1='\/\* @pjs preload=\"';
+for (int j = 0; j < 9; j++) { if (j==0) { str1+="imagenes/TCS.000" + (j+1) + ".jpg"; } else { str1+=",imagenes/TCS.000" + (j+1) + ".jpg"; } }
+str1+='\"; \*\/';
+document.write(str1);
+
+
+</script>
+
+<canvas width="613px" height="613px"></canvas>
+
+
+
+</body>
+</html>
