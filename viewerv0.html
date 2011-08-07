@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Processing.js - Basic Example</title>      
+<script language="javascript" src="processing.init.js"></script>
+<script language="javascript" src="processing-1.2.3.js"></script>
+</head>
+<body>
+
+<script type="application/processing">
+/* 
+  PROCESSINGJS.COM - BASIC EXAMPLE
+  Delayed Mouse Tracking  
+  MIT License - Hyper-Metrix.com/F1LT3R
+  Native Processing compatible 
+*/  
+
+// Global variables
+PImage img;
+int maxImages = 9; // Total # of images
+int imageIndex = 0; // Initial image to be displayed is the first
+PImage[] images = new PImage[maxImages]; // The image array
+
+// Setup the Processing Canvas
+void setup(){
+  	size(613,613);
+	// Loading images with numbered files
+	    for (int i = 0; i < images.length; i++) {
+	      images[i] = loadImage("imagenes/TCS.000" + (i+1) + ".jpg");
+	}
+}
+
+// Main draw loop
+void draw(){
+  	background(0);
+	image(images[imageIndex],0,0); // Displaying one image 
+}
+
+
+void mousePressed() {
+	// increment image index by one each cycle
+	// use modulo "%" to return to 0 once the size
+	//of the array is reached
+	imageIndex = (imageIndex + 1) % images.length;      
+}
+
+</script>
+
+<canvas width="613px" height="613px"></canvas>
+
+
+
+</body>
+</html>
